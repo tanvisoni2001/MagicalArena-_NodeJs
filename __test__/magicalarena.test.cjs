@@ -6,3 +6,11 @@ test('Player creation', () => {
     expect(player.strength).toBe(10);
     expect(player.attack).toBe(5);
 });
+
+test('Dice roll', () => {
+    const dice = new Dice(6);
+    expect(dice.sides).toBe(6);
+    const result = dice.roll();
+    expect(result).toBeGreaterThanOrEqual(1);
+    expect(result).toBeLessThanOrEqual(6);
+});
