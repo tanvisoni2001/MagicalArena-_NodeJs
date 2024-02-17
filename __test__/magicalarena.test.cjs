@@ -27,4 +27,15 @@ test('Arena creation', () => {
     expect(arena.player_2).toBe(player_2);
     expect(arena.attackDice).toBe(attackDice);
     expect(arena.defendDice).toBe(defendDice);
-})
+});
+
+test('start Game', () => {
+    const player_1 = new Player(50,5,10);
+    const player_2 = new Player(100,10,5);
+    const attackDice = new Dice(6);
+    const defendDice = new Dice(6);
+
+    const arena  = new Arena(player_1, player_2, attackDice, defendDice);
+
+    arena.startGame();
+});
